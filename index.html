@@ -5,18 +5,25 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Daylight — adaptive display lighting for macOS</title>
 <meta name="description" content="A macOS menu bar utility that shifts your display's warmth and brightness on a schedule you control. Works offline. No account, no network requests, no location permission.">
-<meta name="color-scheme" content="dark light">
-<meta name="theme-color" content="#0e0f13">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#f8f6f1" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0b1510" media="(prefers-color-scheme: dark)">
 
 <meta property="og:type" content="website">
 <meta property="og:title" content="Daylight — adaptive display lighting for macOS">
 <meta property="og:description" content="Shifts your display's warmth and brightness on a schedule you control. Offline, private, and honest about what it does.">
-<meta property="og:image" content="assets/icon-1024.png">
+<meta property="og:url" content="https://daylight-app-wine.vercel.app/">
+<meta property="og:image" content="https://daylight-app-wine.vercel.app/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Daylight: your screen, through the day. Adaptive display lighting for macOS.">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://daylight-app-wine.vercel.app/assets/og.png">
 
 <link rel="icon" href="assets/favicon-32.png" sizes="32x32">
 <link rel="icon" href="assets/favicon-64.png" sizes="64x64">
 <link rel="apple-touch-icon" href="assets/icon-180.png">
+<link rel="preload" href="assets/fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -141,12 +148,12 @@
                   <p class="preview-h">The quick brown fox</p>
                   <p class="preview-p">Body text at the current setting, so you can see what reading would feel like rather than only what the number says.</p>
                   <div class="preview-swatches">
-                    <span style="background:#ffffff"></span>
-                    <span style="background:#c7ccd6"></span>
-                    <span style="background:#5b8dd6"></span>
-                    <span style="background:#4fb477"></span>
-                    <span style="background:#d8574b"></span>
-                    <span style="background:#e0a23f"></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
                   </div>
                 </div>
               </div>
@@ -531,6 +538,7 @@
     <div>
       <span class="brand-small">Daylight</span>
       <p class="meta">Adaptive display lighting for macOS. Built with no third-party dependencies.</p>
+      <p class="footer-labs">An independent product by <a href="https://johnjayasankar.com">John Jayasankar</a>, part of <a href="https://labs.johnjayasankar.com">Labs</a>.</p>
     </div>
     <nav aria-label="Footer">
       <a href="downloads/Daylight-1.0.0.zip" download>Download</a>

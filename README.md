@@ -28,13 +28,15 @@ Leave the build command and output directory empty. There is no build.
 
 ```
 index.html         the page
-styles.css         design tokens and layout, dark-first with a light scheme
+styles.css         design tokens and layout: the Labs family look, with a dark scheme
 app.js             the demo: day curve, year ribbon, schedule editor, sharing
 assets/policy.js   a port of the app's precedence resolver
 vercel.json        security headers and cache policy
 assets/engine.js   a port of the app's schedule engine
 assets/export.js   builds a settings file the app can import
 assets/data.js     generated — presets, cities, and a real settings template
+assets/fonts/      Inter and IBM Plex Mono, self-hosted
+assets/og.png      the link-preview card
 assets/            icon, screenshots
 downloads/         the app build and the source archive
 ```
@@ -131,8 +133,8 @@ Two things worth knowing, both stated on the page:
 Checked, not assumed:
 
 - Every piece of text meets WCAG AA contrast in both colour schemes — measured
-  across 349 text nodes with every schedule step expanded and every precedence
-  layer on, lowest ratio 5.96 dark and 5.10 light. The ribbon's hour marks sit on the painted colour field
+  across 223 text elements with every schedule step expanded and every precedence
+  layer on, lowest ratio 5.01 light and 5.03 dark. The ribbon's hour marks sit on the painted colour field
   rather than on a themed surface, so they are measured separately against
   sampled field pixels: worst 8.31:1.
 - No horizontal overflow at 320, 375, 768, 1024 or 1280 px.
@@ -160,4 +162,5 @@ Checked, not assumed:
 - `prefers-reduced-motion` disables the reveals and smooth scrolling.
 
 `vercel.json` sets a strict Content-Security-Policy with no `'unsafe-inline'`,
-which is why there is no inline `<style>` or `<script>` anywhere in the markup.
+which is why there is no inline `<style>`, `<script>` or `style` attribute anywhere in
+the markup, and why the fonts are served from `assets/fonts/`.
