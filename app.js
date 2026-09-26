@@ -29,7 +29,7 @@
     const note = document.createElement('p');
     note.className = 'demo-unavailable';
     note.setAttribute('role', 'status');
-    note.textContent = 'The live demo could not start — '
+    note.textContent = 'The live demo could not start: '
       + (window.DAYLIGHT_ENGINE_MISSING || 'a script did not load')
       + '. Reloading usually fixes it. Everything else on this page is unaffected.';
     body.prepend(note);
@@ -403,7 +403,7 @@
     note.textContent = '';
     const line = document.createElement('span');
     line.textContent = copied
-      ? 'Link copied. It carries the whole schedule — no account, nothing stored on a server. '
+      ? 'Link copied. It carries the whole schedule: no account, nothing stored on a server. '
       : 'Your browser would not let the page reach the clipboard, so here is the link: ';
     note.appendChild(line);
     if (!copied) {
@@ -451,7 +451,7 @@
     const note = $('editor-note');
     note.hidden = false;
     note.className = 'editor-note is-done';
-    note.textContent = 'This schedule came from a link. Change anything you like — '
+    note.textContent = 'This schedule came from a link. Change anything you like. '
       + '"Reset to the preset" puts it back to the one Daylight ships.';
     return true;
   }
@@ -579,7 +579,7 @@
     } else if (rise === E.POLAR_NIGHT || set === E.POLAR_NIGHT) {
       el.textContent = 'The sun does not rise there today';
     } else {
-      el.textContent = `Sun ${E.clockString(rise)} – ${E.clockString(set)}`;
+      el.textContent = `Sun ${E.clockString(rise)} to ${E.clockString(set)}`;
     }
     el.title = `Sunrise and sunset today in ${c.name}, on ${c.name}'s own clock`;
   }
@@ -723,7 +723,7 @@
       const note = merged ? 'overlaps the step before it'
                  : a.origin === 'clamped-early' ? 'held later than the sun'
                  : a.origin === 'clamped-late' ? 'held earlier than the sun'
-                 : a.origin === 'no-location' ? 'fallback — no city chosen'
+                 : a.origin === 'no-location' ? 'fallback: no city chosen'
                  : a.origin === E.POLAR_DAY ? 'the sun does not set today'
                  : a.origin === E.POLAR_NIGHT ? 'the sun does not rise today'
                  : a.kind === 'solar' ? 'follows the sun' : '';

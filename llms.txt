@@ -1,0 +1,21 @@
+# Daylight
+
+> A macOS menu bar utility that shifts your display's warmth and brightness on a
+> schedule you control. Works offline. No account, no network requests, no location
+> permission.
+
+One page of static HTML. The schedule demo on the page is the app's own engine
+running in the browser, so every number it shows is computed locally.
+
+## On this page
+
+- [How it works](https://daylight-app-wine.vercel.app/#how): the schedule, the layer ladder, and what decides a value.
+- [Details](https://daylight-app-wine.vercel.app/#detail): solar times without a location prompt, display identity, the menu bar panel.
+- [What it does not claim](https://daylight-app-wine.vercel.app/#honest): software dimming, not backlight control; not notarised.
+- [Download](https://daylight-app-wine.vercel.app/#download): macOS 14 or later, Apple Silicon and Intel.
+
+## Elsewhere
+
+- [Labs](https://labs.johnjayasankar.com/): the other independent products.
+- [Case study](https://johnjayasankar.com/work/daylight): how it was built.
+- Contact: johnjayasankar@gmail.com
